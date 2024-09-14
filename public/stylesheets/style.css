@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.carousel-inner img {
+  height: 500px; /* Adjust this value to the desired height */
+  object-fit: contain; /* Ensures the image covers the entire area while maintaining aspect ratio */
+  width: 100%; /* Keeps the full width */
+}
+
+
+/* Apply purple background to the entire carousel */
+#carouselExampleControls {
+  background-color: purple; /* Sets the background color of the whole carousel */
+}
+
+/* Optional: Apply the background specifically to the inner part of the carousel */
+.carousel-inner {
+  background-color: purple; /* Sets the background color inside the carousel */
+}
+
+/* Optional: If you want a border or more visual distinction */
+.carousel-item {
+  background-color: purple; /* Ensures each item has the background color */
+  border-radius: 10px; /* Optional: adds rounded corners to the carousel items */
+}

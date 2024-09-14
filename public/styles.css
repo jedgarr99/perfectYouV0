@@ -1,0 +1,5 @@
+.carousel-inner img {
+    height: 50px; /* Adjust this value to the desired height */
+    object-fit: cover; /* Ensures the image covers the entire area while maintaining aspect ratio */
+    width: 100%; /* Keeps the full width */
+  }
