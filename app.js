@@ -22,5 +22,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', indexRouter);
 
-// Export app
+// Export app for Vercel
 module.exports = app;
+
+// Check if the app is running locally or in production
+if (require.main === module) {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+  });
+}
