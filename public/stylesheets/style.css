@@ -1,6 +1,10 @@
+/* Set a background color for the entire page */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #d5e5fc; /* Light gray background */
+  color: #333; /* Ensure text is readable against the light background */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Optional: set a general font */
 }
 
 a {
@@ -28,4 +32,97 @@ a {
 .carousel-item {
   background-color: purple; /* Ensures each item has the background color */
   border-radius: 10px; /* Optional: adds rounded corners to the carousel items */
+}
+
+
+
+/* Custom styling for the Get Started section */
+.get-started-section {
+  background-color: #add8e6; /* Light blue background */
+  padding: 20px;             /* Adds some padding for visual spacing */
+  border-radius: 8px;        /* Optional: adds rounded corners */
+}
+
+/* Custom styling for the Navbar */
+.navbar.bg-light-pink {
+  background-color: #ffc0cb; /* Light pink background */
+  border-bottom: 2px solid #f8a5c2; /* Optional: add a subtle bottom border */
+}
+
+/* Make sure the navbar stays on top and does not overlap content */
+body {
+  padding-top: 56px; /* Adjust this value based on the navbar height */
+}
+
+/* Ensure the navbar is fixed at the top */
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030; /* Ensures it stays above other content */}
+
+  /* Custom styling for the How It Works section */
+.how-it-works-section {
+  background-color: #f0f8ff; /* Light blue background similar to the Get Started section */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd; /* Optional: adds a subtle border */
+}
+
+
+
+/* Custom styling for the "What Our Users Say" section */
+.user-opinions-section {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 40px 20px;        /* Adds padding around the section */
+  font-family: 'Times New Roman', Times, serif; /* Serif font for a newspaper look */
+  border-top: 2px solid #ddd; /* Optional: adds a subtle top border */
+  border-bottom: 2px solid #ddd; /* Optional: adds a subtle bottom border */
+}
+
+/* Style blockquotes to look like newspaper quotes */
+.user-opinions-section .blockquote {
+  background-color: #ffffff; /* White background for each blockquote */
+  border-left: 5px solid #6c757d; /* Gray left border for blockquote style */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-style: italic; /* Italic text for the quotes */
+  max-height: 250px; /* Limit height to maintain a balanced layout */
+  overflow: auto; /* Allow scroll if text exceeds the limit */
+}
+
+/* Adjust the footer of each blockquote */
+.user-opinions-section .blockquote-footer {
+  color: #6c757d; /* Subtle gray color for footer */
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+/* Layout adjustments */
+.user-opinions-section .row > div {
+  display: flex; /* Flex to allow vertical alignment */
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: space-between; /* Space items evenly */
+}
+
+
+
+
+/* Custom styling for the footer */
+.footer {
+  background-color: #343a40; /* Dark background */
+  color: #ffffff;           /* White text */
+}
+
+/* Adjust links and icons */
+.footer a {
+  color: #ffffff;           /* White color for links */
+  transition: color 0.2s;   /* Smooth color transition */
+}
+
+.footer a:hover {
+  color: #ffc107;           /* Change color on hover */
+}
+
+/* Responsive adjustments */
+.footer .text-md-start {
+  text-align: left !important; /* Ensures text alignment on medium screens and up */
 }
