@@ -22,10 +22,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', indexRouter);
 
-// Export app for Vercel
+// Export app
 module.exports = app;
 
-// Check if the app is running locally or in production
+// Local server for development
 if (require.main === module) {
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
