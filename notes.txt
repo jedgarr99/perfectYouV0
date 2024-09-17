@@ -1,2 +1,5 @@
 venv\Scripts\activate.bat
 http://localhost:3000
+
+
+npm start

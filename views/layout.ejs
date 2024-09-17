@@ -4,14 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Express App</title>
+  <title>PerfectYou.AI</title>
+  
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/stylesheets/style.css">
+  
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
 </head>
 <body>
+  <!-- Navbar Partial -->
   <%- include('partials/navbar') %>
+
+  <!-- Main Content -->
   <main class="container mt-4">
     <%- include('main') %>
     <%- include('partials/getStarted') %>
@@ -19,11 +32,46 @@
     <%- include('partials/carousel') %>
     <%- include('partials/opinions') %>
     <%- include('partials/footer') %>
-
   </main>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- Bootstrap JS (Bootstrap 5) -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  
+
+  <!-- jQuery Easing Plugin for smooth scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+  <!-- Carousel Initialization -->
+  <script>
+    // Toggle active class on theme buttons
+document.querySelectorAll('.theme-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+    // Add active class to the clicked button
+    button.classList.add('active');
+  });
+});
+    $(document).ready(function () {
+      $(".custom-carousel").owlCarousel({
+        autoWidth: true,
+        loop: true
+      });
+
+      $(".custom-carousel .item").click(function () {
+        $(".custom-carousel .item").not($(this)).removeClass("active");
+        $(this).toggleClass("active");
+      });
+
+      
+    });
+  </script>
 
 </body>
 </html>

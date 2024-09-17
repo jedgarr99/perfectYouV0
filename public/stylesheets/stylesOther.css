@@ -1,0 +1,29 @@
+/* Set an animated space-themed gradient background for the entire page */
+body {
+    background: linear-gradient(-45deg, #a6e4ff, #9ea5ff, #dea9f7, #e195dd);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #333; /* Ensure text is readable against the light background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Optional: set a general font */
+    height: 100vh; /* Ensure the background covers the full viewport height */
+  }
+  
+  /* Keyframes for animated gradient */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Styling for links */
+  a {
+    color: #212ee8;
+  }
